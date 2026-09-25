@@ -2,10 +2,7 @@
 
 <head>
 
-    <title>
-        ELS Café - Menu
-    </title>
-
+    <title>ELS Café - Menu</title>
 
     <style>
 
@@ -16,12 +13,18 @@
             font-family: Arial, sans-serif;
         }
 
+
+        /* TOP */
+
         .top {
             background-color: #4B2E22;
             color: white;
             text-align: center;
             padding: 28px;
         }
+
+
+        /* NAVIGATION */
 
         .nav {
             background-color: #EAD6BD;
@@ -36,37 +39,64 @@
             margin: 0 18px;
         }
 
+
+        /* MAIN CONTENT */
+
         .wrap {
             width: 88%;
+            max-width: 900px;
             margin: 30px auto;
+            box-sizing: border-box;
         }
+
 
         .intro {
             text-align: center;
         }
 
+        .intro h2 {
+            color: #6B4535;
+        }
+
+
+        /* BEST SELLERS TABLE */
+
+        .table-container {
+            width: 100%;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
         table {
             width: 100%;
+            max-width: 100%;
             border-collapse: collapse;
             background-color: white;
             box-shadow: 0 3px 12px #D8C7B6;
+            table-layout: fixed;
+            box-sizing: border-box;
         }
 
         th {
             background-color: #6B4535;
             color: white;
-            padding: 15px;
+            padding: 13px 8px;
+            word-wrap: break-word;
         }
 
         td {
-            padding: 14px;
+            padding: 13px 8px;
             border-bottom: 1px solid #EAD6BD;
             text-align: center;
+            word-wrap: break-word;
         }
 
         tr:hover {
             background-color: #FFF1DF;
         }
+
+
+        /* SPECIAL OFFER */
 
         .offer {
             background-color: #EAD6BD;
@@ -74,7 +104,51 @@
             text-align: center;
             border-radius: 15px;
             margin: 25px 0;
+            box-sizing: border-box;
         }
+
+        .offer a {
+            color: #7A3E2D;
+            font-weight: bold;
+        }
+
+
+        /* COFFEE IMAGE */
+
+        .menu-photo {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .menu-photo img {
+            width: 100%;
+            max-width: 520px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+
+        /* CATEGORIES */
+
+        .categories {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px #D8C7B6;
+            box-sizing: border-box;
+        }
+
+        .categories h2 {
+            color: #6B4535;
+        }
+
+        .categories ol {
+            line-height: 2;
+        }
+
+
+        /* FOOTER */
 
         footer {
             background-color: #4B2E22;
@@ -84,6 +158,59 @@
             margin-top: 35px;
         }
 
+
+        /* PHONE */
+
+        @media screen and (max-width: 600px) {
+
+            .top {
+                padding: 22px 10px;
+            }
+
+            .top h1 {
+                font-size: 26px;
+            }
+
+            .top p {
+                font-size: 14px;
+            }
+
+            .nav {
+                padding: 12px 3px;
+            }
+
+            .nav a {
+                margin: 0 7px;
+                font-size: 12px;
+            }
+
+            .wrap {
+                width: 92%;
+                margin: 25px auto;
+            }
+
+            table {
+                font-size: 11px;
+            }
+
+            th {
+                padding: 9px 4px;
+            }
+
+            td {
+                padding: 10px 4px;
+            }
+
+            .offer {
+                padding: 18px 12px;
+            }
+
+            .menu-photo img {
+                height: 200px;
+            }
+
+        }
+
     </style>
 
 </head>
@@ -91,6 +218,8 @@
 
 <body>
 
+
+<!-- TOP -->
 
 <div class="top">
 
@@ -105,6 +234,8 @@
 
 </div>
 
+
+<!-- NAVIGATION -->
 
 <div class="nav">
 
@@ -127,214 +258,231 @@
 </div>
 
 
+<!-- MAIN -->
+
 <div class="wrap">
 
 
-<div class="intro">
+    <!-- INTRO -->
 
-    <h2>
-        Our Best Sellers
-    </h2>
+    <div class="intro">
 
-    <p>
-        Affordable favorites prepared
-        for every coffee and dessert lover.
-    </p>
+        <h2>
+            Our Best Sellers
+        </h2>
+
+        <p>
+            Affordable favorites prepared
+            for every coffee and dessert lover.
+        </p>
+
+    </div>
+
+
+    <!-- TABLE -->
+
+    <div class="table-container">
+
+        <table>
+
+            <tr>
+
+                <th>
+                    Product
+                </th>
+
+                <th>
+                    Description
+                </th>
+
+                <th>
+                    Category
+                </th>
+
+                <th>
+                    Price
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <b>Hot Coffee</b>
+                </td>
+
+                <td>
+                    Cold, creamy, and refreshing coffee
+                </td>
+
+                <td>
+                    Drinks
+                </td>
+
+                <td>
+                    ₱80
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <b>Chocolate Cake</b>
+                </td>
+
+                <td>
+                    Rich and soft chocolate cake
+                </td>
+
+                <td>
+                    Dessert
+                </td>
+
+                <td>
+                    ₱120
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <b>Chocolate Roll</b>
+                </td>
+
+                <td>
+                    Soft roll with a sweet chocolate filling
+                </td>
+
+                <td>
+                    Pastry
+                </td>
+
+                <td>
+                    ₱50
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <b>Strawberry Cupcake</b>
+                </td>
+
+                <td>
+                    Soft cupcake with strawberry topping
+                </td>
+
+                <td>
+                    Dessert
+                </td>
+
+                <td>
+                    ₱60
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <b>Chocolate Chip Cookies</b>
+                </td>
+
+                <td>
+                    Crunchy cookies with chocolate chips
+                </td>
+
+                <td>
+                    Snack
+                </td>
+
+                <td>
+                    ₱40
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <!-- SPECIAL OFFER -->
+
+    <div class="offer">
+
+        <h2>
+            ✨ ELS Café Special
+        </h2>
+
+        <p>
+            Buy 2 drinks and get
+            a special dessert discount!
+        </p>
+
+        <a href="contact.html"
+           target="main">
+
+            ORDER OR INQUIRE →
+
+        </a>
+
+    </div>
+
+
+    <!-- PHOTO -->
+
+    <div class="menu-photo">
+
+        <img src="coffees.jpg"
+             alt="ELS Café Coffee">
+
+    </div>
+
+
+    <!-- CATEGORIES -->
+
+    <div class="categories">
+
+        <h2>
+            Categories
+        </h2>
+
+        <ol>
+
+            <li>
+                Coffee and Refreshing Drinks
+            </li>
+
+            <li>
+                Cakes and Pastries
+            </li>
+
+            <li>
+                Chocolate Treats
+            </li>
+
+            <li>
+                Cookies and Snacks
+            </li>
+
+        </ol>
+
+    </div>
+
 
 </div>
 
 
-<table>
-
-
-<tr>
-
-    <th>
-        Product
-    </th>
-
-    <th>
-        Description
-    </th>
-
-    <th>
-        Category
-    </th>
-
-    <th>
-        Price
-    </th>
-
-</tr>
-
-
-<tr>
-
-    <td>
-        <b>Iced Coffee</b>
-    </td>
-
-    <td>
-        Cold, creamy, and refreshing coffee
-    </td>
-
-    <td>
-        Drinks
-    </td>
-
-    <td>
-        ₱80
-    </td>
-
-</tr>
-
-
-<tr>
-
-    <td>
-        <b>Chocolate Cake</b>
-    </td>
-
-    <td>
-        Rich and soft chocolate cake
-    </td>
-
-    <td>
-        Dessert
-    </td>
-
-    <td>
-        ₱120
-    </td>
-
-</tr>
-
-
-<tr>
-
-    <td>
-        <b>Chocolate Roll</b>
-    </td>
-
-    <td>
-        Soft roll with a sweet chocolate filling
-    </td>
-
-    <td>
-        Pastry
-    </td>
-
-    <td>
-        ₱50
-    </td>
-
-</tr>
-
-
-<tr>
-
-    <td>
-        <b>Strawberry Cupcake</b>
-    </td>
-
-    <td>
-        Soft cupcake with strawberry topping
-    </td>
-
-    <td>
-        Dessert
-    </td>
-
-    <td>
-        ₱60
-    </td>
-
-</tr>
-
-
-<tr>
-
-    <td>
-        <b>Chocolate Chip Cookies</b>
-    </td>
-
-    <td>
-        Crunchy cookies with chocolate chips
-    </td>
-
-    <td>
-        Snack
-    </td>
-
-    <td>
-        ₱40
-    </td>
-
-</tr>
-
-
-</table>
-
-
-<div class="offer">
-
-    <h2>
-        ✨ ELS Café Special
-    </h2>
-
-    <p>
-        Buy 2 drinks and get
-        a special dessert discount!
-    </p>
-
-    <a href="contact.html"
-       target="main">
-
-       ORDER OR INQUIRE →
-
-    </a>
-
-</div>
-
-
-<center>
-
-    <img src="coffees.jpg"
-         width="300"
-         height="300"
-         alt="Coffee">
-
-</center>
-
-
-<h2>
-    Categories
-</h2>
-
-
-<ol>
-
-    <li>
-        Coffee and Refreshing Drinks
-    </li>
-
-    <li>
-        Cakes and Pastries
-    </li>
-
-    <li>
-        Chocolate Treats
-    </li>
-
-    <li>
-        Cookies and Snacks
-    </li>
-
-</ol>
-
-
-</div>
-
+<!-- FOOTER -->
 
 <footer>
 
